@@ -12,37 +12,37 @@
   > 패킷?   
 package + bucket의 합성어
 ### IP 패킷 정보
-![img.png](IP_Packet.png)
+![img.png](images/IP_Packet.png)
 - 클라이언트와 서버에서 각각 인터넷망에 IP 패킷 정보를 담아서 던지면 데이터가 해당 정보에 따라 목적지까지 전달된다.
-![img.png](clientPacket.png)
-![img.png](serverPacket.png)
+![img.png](images/clientPacket.png)
+![img.png](images/serverPacket.png)
 ### IP 프로토콜의 한계
 #### 비연결성
 - 패킷을 받을 대상이 없거나 서비스 불능 상태여도 패킷 전송
-![img.png](IP_1.png)
+![img.png](images/IP_1.png)
 - 대상 서버가 데이터를 받을 수 있는 상태인지 몰라도 계속 통신을 시도한다.
 #### 비신뢰성
 - 패킷 소실 > 중간에 패킷이 사라지면?
-![img.png](IP_2.png)
+![img.png](images/IP_2.png)
   - 데이터 전송 중 서버가 중단되면 패킷이 소실되지만 클라이언트는 이를 모른다.
 - 패킷 전달 순서 문제 발생 > 패킷이 순서대로 안오면?
-![img.png](IP_3.png)
+![img.png](images/IP_3.png)
   - 한번에 통신해야하는 byte가 너무 많을 경우 나눠서 데이터가 전달되지만 진행되는 노드에 따라 순서가 다르게 전달될 수 있다.
   - 데이터를 전달하고자 하는 의도와 다르게 전달된다.
 #### 프로그램 구분
 - 같은 IP를 사용하는 서버에서 통신하는 애플리케이션이 둘 이상이라면?
 ## TCP, UDP
-![img.png](IP_stack.png)
+![img.png](images/IP_stack.png)
 ### TCP(전송 제어 프로토콜 = Transmission Control Protocol)
-![img.png](tcp.png)
+![img.png](images/tcp.png)
 > IP 패킷이란   
 실제로는 HTTP 데이터를 감싼(포함한) TCP 데이터를 감싼(포함한) 것
 
-![img.png](tcp_bucket.png)
+![img.png](images/tcp_bucket.png)
 - TCP 세그먼트에 전송 제어, 순서, 검증 정보 등이 포함되어 있기 때문에 IP 프로토콜의 한계점이 어느정도 해소된다
 #### 특징
 - 연결지향 : TCP 3 way handshake(가상 연결)
-  ![img.png](3wayHandshake.png)
+  ![img.png](images/3wayHandshake.png)
   - 데이터를 총 3번 주고 받으며 연결이 되었는지 확인하고 이후 데이터를 전달한다.
   - 대상 서버가 데이터를 받을 수 없는 상태라면 알 수 있다.
   - 비연결성 해소
@@ -71,7 +71,7 @@ package + bucket의 합성어
   - IP는 아파트, PORT는 동,호수
 > 같은 IP 내에서 프로세스를 구분한다.
 
-![img.png](port.png)
+![img.png](images/port.png)
 
 ## DNS
 - IP는 기억하기 어렵다는 단점이 있다.
